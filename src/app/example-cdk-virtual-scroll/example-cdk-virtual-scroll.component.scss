@@ -1,0 +1,16 @@
+.example-viewport {
+  height: 100%;
+}
+
+.top-header,
+.bottom-header {
+  position: absolute;
+  z-index: 99;
+}
+
+.top-header {
+  top: 56px;
+  @media (min-width: 480px) {
+    top: 64px;
+  }
+}

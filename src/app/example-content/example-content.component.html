@@ -1,0 +1,15 @@
+<mat-sidenav-container>
+  <mat-sidenav-content scrollDirection (scrolledUp)="flag = true" (scrolledDown)="flag = false">
+
+    <mat-toolbar class="top-header" [class.hide]="!flag">
+      Row can hidden (Slide top)
+    </mat-toolbar>
+
+    <div class="content" [innerHTML]="varOfEvil"></div>
+
+    <mat-toolbar class="bottom-header" [class.hide]="flag">
+      Row can hidden (Slide bottom)
+    </mat-toolbar>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

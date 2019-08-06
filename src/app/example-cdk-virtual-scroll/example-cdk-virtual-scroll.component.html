@@ -1,0 +1,18 @@
+<div class="fixed-content">
+  <mat-toolbar class="top-header" [class.hide]="!flag">
+    Row can hidden (Slide top)
+  </mat-toolbar>
+
+  <cdk-virtual-scroll-viewport itemSize="48" class="example-viewport" scrollDirection (scrolledUp)="flag = true"
+    (scrolledDown)="flag = false">
+    <mat-list>
+      <mat-list-item class="example-item" *cdkVirtualFor="let item of items">
+        {{item}}
+      </mat-list-item>
+    </mat-list>
+  </cdk-virtual-scroll-viewport>
+
+  <mat-toolbar class="bottom-header" [class.hide]="flag">
+    Row can hidden (Slide bottom)
+  </mat-toolbar>
+</div>
